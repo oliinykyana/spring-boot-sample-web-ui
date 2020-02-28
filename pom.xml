@@ -89,7 +89,7 @@
 								<review.team>qa</review.team>
 							</deployProperties>
 							<publisher>
-								<contextUrl>https://oss.jfrog.org</contextUrl>
+								<contextUrl>http://http://3.19.221.25:8081/artifactory</contextUrl>
 								<username>jenkins</username>
 								<password>jenkins</password>
 								<repoKey>libs-release-local</repoKey>
