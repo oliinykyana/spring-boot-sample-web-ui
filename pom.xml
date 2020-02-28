@@ -28,12 +28,6 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
-			<groupId>org.jfrog.buildinfo</groupId>
-			<artifactId>artifactory-maven-plugin</artifactId>
-			<version>2.7.0</version>
-			<type>pom</type>
-		</dependency>
 	</dependencies>
 	<build>
 		<plugins>			
@@ -68,33 +62,6 @@
 								</bannedDependencies>
 							</rules>
 							<fail>true</fail>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-			<plugin>
-				<groupId>org.jfrog.buildinfo</groupId>
-				<artifactId>artifactory-maven-plugin</artifactId>
-				<version>2.6.1</version>
-				<inherited>false</inherited>
-				<executions>
-					<execution>
-						<id>build-info</id>
-						<goals>
-							<goal>publish</goal>
-						</goals>
-						<configuration>
-							<deployProperties>
-								<gradle>awesome</gradle>
-								<review.team>qa</review.team>
-							</deployProperties>
-							<publisher>
-								<contextUrl>https://oss.jfrog.org</contextUrl>
-								<username>jenkins</username>
-								<password>jenkins</password>
-								<repoKey>libs-release-local</repoKey>
-								<snapshotRepoKey>libs-snapshot-local</snapshotRepoKey>
-							</publisher>
 						</configuration>
 					</execution>
 				</executions>
